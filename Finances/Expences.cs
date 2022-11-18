@@ -15,11 +15,13 @@ namespace Finances
         {
             if (String.IsNullOrEmpty(name))
             {
-                throw new ArgumentException("Please enter a valid product name!");
+                MessageBox.Show("Please enter a valid product name!");
+                return;
             }
             if (amount < 0)
-            { 
-                throw new ArgumentException("Please enter a valid product amount!");
+            {
+                MessageBox.Show("Please enter a valid product amount!");
+                return;
             }
             this.name = name;
             this.amount = amount;
